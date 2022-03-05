@@ -1,0 +1,55 @@
+$width: 300px;
+
+.cat_shop_title{
+    text-align: center;
+}
+
+.cat_shop_items{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    border-style: groove;
+    width: fit-content;
+    .cat_shop_item{
+        width: fit-content;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 0 auto;
+        .item__name{
+            text-align: center;
+            width: $width;
+            margin: 0 auto;
+        }
+        .item__img{
+            width: $width;
+            margin: 0 auto;
+            img{
+                display: block;
+                background-color: burlywood;
+                height: 200px;
+                width: 200px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                border: 1px solid black;
+            }
+        }
+        .item__description{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+            width: $width;
+        }
+        .item__price{
+            p{
+                width: $width;
+            }
+        }
+        .item__add_to_cart{
+            width: $width;
+            .item__added{
+                margin: 10px;
+                width: $width;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="cat_shop_items">
+<div class="cat_shop_item" *ngIf="item"> 
+    <!-- will load if item is not null -->
+    <div class="item__name" >
+      <h2 [innerText]="item.name"></h2>
+    </div>
+    <div class="item__img">
+      <img [src]="item.img" alt="cat toy img" >
+    </div>
+    <div class="item__description" >
+      <p>
+        <strong> Description: </strong> <span [innerText]="item.desciption"></span>
+      </p>
+    </div>
+    <div class="item__price" >
+      <p>
+        <strong>Price: </strong> <span [innerText]="item.price | currency"></span>
+      </p>
+    </div> 
+    <div class="item__add_to_cart">
+      <button (click)="onAddToCart()">Add to Cart</button>
+      <button (click)="onRemove()">Remove from Cart</button>
+      <span class="item__added" *ngIf="clicked" [innerText]="clicked"></span>
+    </div>
+    
+  </div>
+</div>

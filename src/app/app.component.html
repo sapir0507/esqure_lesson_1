@@ -1,0 +1,23 @@
+
+<div class="cat_shop_title">
+  <h1 class="title" [innerText]="get_title()"></h1>
+</div>
+<hr>
+<app-item 
+  *ngFor="let item of get_items()" 
+  [item]="item"
+  [existInCart]="existInCart(item.id)"
+  (addToCart)="addToCart($event)" 
+>
+</app-item>
+<hr>
+<h1>shopping cart</h1>
+<app-item class="cat_shop_items" 
+  *ngFor="let item of shoppingCart" 
+  [item]="item"
+  [existInCart]="existInCart(item.id)"
+  (removeFromCart)="removeFromCart($event)" 
+>
+</app-item>
+
+<router-outlet></router-outlet>
